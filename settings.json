@@ -5,9 +5,6 @@
     "files.autoSave": "onFocusChange",
     "editor.formatOnSave": false,
     "explorer.confirmDelete": false,
-    "Lua.workspace.library": [
-        "C:\\Users\\Sven\\work\\astartes-2023\\CMO_1147posted830\\CMO_1147"
-    ],
     "explorer.confirmDragAndDrop": false,
     "autoDocstring.docstringFormat": "sphinx-notypes",
     "autoDocstring.startOnNewLine": true,
@@ -17,8 +14,22 @@
     "editor.lineNumbers": "relative",
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+      { //exit insert mode
+        "before": [
+          "j",
+          "k"
+        ],
+        "after": [
+          "<Esc>"
+        ]
+      }],
     "vim.normalModeKeyBindingsNonRecursive": [
-    
+      {
+        "before": ["g", "H"],
+        "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+      },
         {
           "before": ["J"],
           "after": ["5", "j"]
@@ -63,5 +74,7 @@
       { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
       // toggle comment selection
       { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
-    ]
+    ],
+    "editor.minimap.enabled": false,
+    "workbench.settings.openDefaultSettings": true
 }
